@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.14)
+project(example_for_remote_debug_of_clion_with_docker)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(example_for_remote_debug_of_clion_with_docker main.cpp)

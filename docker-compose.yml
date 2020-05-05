@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  centos_7:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: centos_7
+    image: centos_7
+    ports:
+      - "22222:22"    # ssh port
+      - "22244:22244" # gdbserver port
+    stdin_open: true
+    tty: true
+    # for remote debugging
+    security_opt:
+      - seccomp:unconfined
+    cap_add:
+      - SYS_PTRACE
